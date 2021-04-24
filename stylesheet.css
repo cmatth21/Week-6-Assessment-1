@@ -1,0 +1,100 @@
+/* CSS Variables */
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --darkercyan: hsl(179, 100%, 13%);
+    --transwhite: hsla(0, 0%, 100%, 0.75);
+    --lightgray: hsl(0, 0%, 95%)
+}
+
+/* Font and Colors*/
+body{
+    margin: 0;
+    padding: 0;
+}
+body, h1{
+    color: var(--lightgray)
+}
+h1{
+    font-family: 'Big Shoulders Display', cursive;
+
+}
+p{
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--transwhite);
+    font-size: 14px;
+    margin-bottom: 60px;
+    line-height: 1.5em;
+}
+button{
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 10px 28px;
+    background-color: var(--lightgray);
+    border: solid transparent;
+    border-radius: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Container */
+
+.container{
+    display: flex;
+    flex-direction: row;
+    padding: 120px 250px;
+    justify-content: center;
+    min-height: 430px;
+}
+
+.box1{
+    background-color: var(--orange);
+    border: solid transparent;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 40px 40px;
+}
+.firstbox{
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.box2{
+    background-color: var(--cyan);
+    padding: 40px 50px;
+}
+.secondbox{
+    color: var(--cyan);
+    font-weight: bold;
+}
+
+.box3{
+    background-color: var(--darkercyan);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 40px 40px;
+}
+
+.lastbox{
+    color: var(--darkercyan);
+    font-weight: bold;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 375px) {
+    .container{
+        display:flex;
+        flex-direction: column;
+        padding: 50px;
+        width: 90%;
+    }
+    .box1{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 8px;
+    }
+    .box3{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    
+}
